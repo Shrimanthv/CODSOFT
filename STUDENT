@@ -1,0 +1,62 @@
+
+TASK-2
+import java.util.Scanner;
+public class project2 {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int total=0;
+        System.out.println("student grade display");
+        System.out.println("enter the marks sored out of 100 in all Subjects");
+        System.out.println("enter the marks scored in English ");
+        int mark1= sc.nextInt();
+        total= total+mark1;
+        System.out.println("enter the marks scored in Kannada");
+        int mark2= sc.nextInt();
+        total= total+mark2;
+        System.out.println("enter the marks scored in Hindi");
+        int mark3= sc.nextInt();
+        total= total+mark3;
+        System.out.println("enter the marks scored in Mathematics");
+        int mark4= sc.nextInt();
+        total= total+mark4;
+        System.out.println("enter the marks scored in Science");
+        int mark5= sc.nextInt();
+        total= total+mark5;
+        System.out.println("enter the marks scored in Social Science");
+        int mark6= sc.nextInt();
+        total= total+mark6;
+        float percentage= (total*100/600);
+
+        if (percentage<40){
+            System.out.println("the student the failed in the exams ");
+        }
+        else if (percentage>40&&percentage<=50) {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'C'");
+        }
+        else if (percentage>50&&percentage<=60) {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'B'");
+        }
+        else if (percentage>60&&percentage<=70) {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'B+'");
+        }
+        else if (percentage>70&&percentage<=80) {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'A'");
+        }
+        else if (percentage>80&&percentage<=90) {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'A+'");
+        }
+        else {
+            System.out.println("the student has passed in the exam");
+            System.out.println("the grade obtained is 'S'");
+        }
+        System.out.println("the total marks scored by the student is "+total+"out of 600");
+        System.out.println("the average percentage obtained is "+percentage);
+
+    }
+
+}
