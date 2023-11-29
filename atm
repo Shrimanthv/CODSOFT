@@ -1,0 +1,82 @@
+
+TASK-3
+import java.util.Scanner;
+public class test {
+    
+    static float Deposit(float deposit,float amount){
+        System.out.println("the amount has been deposited sucessfully");
+        amount+=deposit;
+        System.out.println("the remaining balance is "+amount);
+        return deposit;
+	
+
+    }
+	static float Withdraw(float withdraw ,float amount){
+        if (withdraw>0&&amount<=withdraw){
+            if (withdraw<=20000){
+                amount-= withdraw;
+                System.out.println("please collect your cash ");
+                System.out.println(" the remaining balance is "+amount);
+
+            }
+            else {
+                System.out.println("your account does not have the permission to withdraw the entered amount");
+                System.out.println("for further details contact your bank");
+            }
+        }
+        else {
+            System.out.println("insufficient fund");
+        }
+     return withdraw;
+    }
+    static float balanceenquiry(float amount){
+        System.out.println("the remaining balance in your account is "+amount);
+        System.out.println(" thankoyou for using ATM MACHINE ");
+        return amount;
+
+    }
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("welcome to ATM MACHINE");
+        while(true) {
+            float amount = 10000;
+            System.out.println("choose the option to avail services ");
+            System.out.println(" press 1 for 'WITHDRAW");
+            System.out.println(" press 2 for 'DESPOSIT'");
+            System.out.println("press 3 for 'BALANCE ENQUIRY'");
+            System.out.println(" press 4  'EXIT'");
+            System.out.println("enter your choice ");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1: {
+                    System.out.println("enter the amount to be withdrawn");
+                    float withdraw = sc.nextFloat();
+                    Withdraw(withdraw, amount);
+                    break;
+
+                }
+                case 2: {
+                    System.out.println("enter the amount to deposited");
+                    float deposit = sc.nextFloat();
+                    Deposit(deposit, amount);
+                    break;
+                }
+                case 3: {
+                    balanceenquiry(amount);
+                    break;
+                }
+                case 4: {
+                    System.exit(0);
+                    break;
+                }
+                default: {
+                    System.out.println("please enter a valid choice ");
+                    break;
+                }
+
+
+            }
+
+        }
+    }
+}
